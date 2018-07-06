@@ -1,6 +1,5 @@
 requests!=2.13.0,!=2.12.2,>=2.10.0
 Babel!=2.4.0,>=2.3.4
-buildwebapi>=0.0.2
 shell-util
 pyVmomiwrapper>=0.0.2
 python-keystoneclient>=2.3.1
