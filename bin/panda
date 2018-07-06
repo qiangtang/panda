@@ -7,8 +7,8 @@ import argparse
 
 import logging_utils
 from panda import tempest_utils
-from panda.cluster_utils import NSXV3_BACKEND
-from panda.cluster_utils import NSXV_BACKEND
+from panda.tempest_utils import NSXV3_BACKEND
+from panda.tempest_utils import NSXV_BACKEND
 from panda.tempest_utils import DATA_NET_CIDR
 from panda import shellutil as shell
 

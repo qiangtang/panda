@@ -13,8 +13,6 @@ import yaml
 import shellutil as shell
 from exceptions import NotSupportedError
 from exceptions import NotFoundError
-from cluster_utils import NSXV3_BACKEND
-from cluster_utils import NSXV_BACKEND
 import task_utils
 from os_utils import get_keystone_client
 from os_utils import get_session
@@ -23,6 +21,8 @@ from os_utils import grant_role_on_project
 from os_utils import get_auth_url
 from os_utils import get_auth_url2
 from os_utils import DEFAULT_DOMAIN_ID
+
+
 
 LOG = logging.getLogger(__name__)
 TEMPEST_DIR = 'tempest'
@@ -58,6 +58,10 @@ TENANT_NAME = 'default-tenant-tempest'
 ALT_TENANT_NAME = 'alt-tenant-tempest'
 GIT_CLONE = 'GIT_SSL_NO_VERIFY=true git clone'
 SMOKE_SUFFIX = '-smoke'
+
+DVS_BACKEND = 'dvs'
+NSXV_BACKEND = 'nsxv'
+NSXV3_BACKEND = 'nsxv3'
 
 
 def get_data_path():
