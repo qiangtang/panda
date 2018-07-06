@@ -1,0 +1,147 @@
+[DEFAULT]
+debug = True
+log_file = tempest.log
+use_stderr = False
+
+[auth]
+tempest_roles = TOBEFILLED
+use_dynamic_credentials = TOBEFILLED
+create_isolated_networks = TOBEFILLED
+admin_domain_name = TOBEFILLED
+admin_project_name = TOBEFILLED
+admin_password = TOBEFILLED
+admin_username = TOBEFILLED
+
+[compute]
+image_ref = TOBEFILLED
+image_ref_alt = TOBEFILLED
+flavor_ref = TOBEFILLED
+flavor_ref_alt = TOBEFILLED
+build_timeout = 1800
+fixed_network_name = TOBEFILLED
+endpoint_type = internal
+volume_device_name = sdb
+max_microversion = latest
+
+[compute-feature-enabled]
+pause = false
+block_migrate_cinder_iscsi = true
+block_migration_for_live_migration = true
+resize = true
+console_output = true
+personality = false
+scheduler_available_filters = RetryFilter,AvailabilityZoneFilter,RamFilter,DiskFilter,ComputeFilter,ComputeCapabilitiesFilter,ImagePropertiesFilter,ServerGroupAntiAffinityFilter,ServerGroupAffinityFilter
+attach_encrypted_volume = false
+
+[dashboard]
+login_url = TOBEFILLED
+dashboard_url = TOBEFILLED
+
+[identity]
+disable_ssl_certificate_validation = true
+auth_version = TOBEFILLED
+uri_v3 = TOBEFILLED
+uri = TOBEFILLED
+region = nova
+admin_domain_scope = True
+
+[image]
+build_timeout = 600
+endpoint_type = internal
+disk_formats = vmdk,raw,qcow2,vdi,iso,vhd
+container_formats = bare,ova
+
+[image-feature-enabled]
+api_v1 = False
+
+[input-scenario]
+ssh_user_regex = [["^.*[Uu]buntu.*$", "ubuntu"]]
+
+[network]
+build_timeout = 500
+endpoint_type = internal
+
+[network-feature-enabled]
+api_extensions = binding, dist-router, multi-provider, provider, quotas, external-net, extraroute, router, security-group, port-security
+ipv6 = false
+
+[object-storage]
+endpoint_type = internal
+operator_role = storage-ops-tempest
+
+[orchestration]
+endpoint_type = internal
+build_timeout = 2400
+instance_type = TOBEFILLED
+
+[oslo_concurrency]
+lock_path = /tmp/stack/data/tempest
+
+[scenario]
+dhcp_client = dhclient
+
+[service_available]
+neutron = True
+heat = True
+swift = False
+cinder = True
+nova = True
+glance = True
+sahara = false
+ironic = false
+vmware_nsx = False
+
+[validation]
+ssh_timeout = 900
+image_ssh_user = ubuntu
+image_ssh_password = vmware
+
+[volume]
+build_timeout = 900
+endpoint_type = public
+storage_protocol = vmdk
+vendor_name = VMware
+disk_format = vmdk
+volume_size = 15
+max_microversion = latest
+
+[volume-feature-enabled]
+backup = False
+api_v2 = False
+api_extensions = all
+api_v1 = False
+api_v3 = True
+extend_attached_volume = False
+manage_volume = False
+manage_snapshot = False
+
+[identity-feature-enabled]
+project_tags = True
+security_compliance = False
+api_v2_admin = False
+api_v2 = False
+
+[object-storage-feature-enabled]
+discoverable_apis = all
+
+[heat_plugin]
+disable_ssl_certificate_validation = true
+endpoint_type = internal
+region = nova
+username = TOBEFILLED
+password = TOBEFILLED
+project_name = TOBEFILLED
+auth_url = TOBEFILLED
+user_domain_name = TOBEFILLED
+project_domain_name = TOBEFILLED
+auth_version = TOBEFILLED
+admin_username = TOBEFILLED
+admin_password = TOBEFILLED
+instance_type = TOBEFILLED
+minimal_instance_type = TOBEFILLED
+image_ref = TOBEFILLED
+minimal_image_ref = TOBEFILLED
+fixed_network_name = TOBEFILLED
+fixed_subnet_name = TOBEFILLED
+floating_network_name = TOBEFILLED
+boot_config_env = ../heat-tempest-plugin/heat_tempest_plugin/tests/scenario/templates/boot_config_none_env.yaml
