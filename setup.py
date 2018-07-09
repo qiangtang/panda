@@ -22,8 +22,6 @@ setup(
         'panda': extra_files
     },
     install_requires=[
-        'shell-util',
-        'pyVmomiwrapper',
         'python-keystoneclient',
         'python-neutronclient',
         'python-novaclient',
