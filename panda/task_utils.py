@@ -3,7 +3,7 @@ import logging
 import time
 
 from exceptions import TimeoutError
-from shellutil import shell
+import shellutil as shell
 
 
 LOG = logging.getLogger(__name__)

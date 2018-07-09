@@ -131,7 +131,6 @@ def install_tempest(repository='github.com/openstack/tempest.git',
         task_utils.safe_run('%s -b %s %s' % (GIT_CLONE, branch, clone_url),
                             'Clone tempest')
         try:
-            # apply patch due to bug 2088762
             git_pick = 'GIT_SSL_NO_VERIFY=true git fetch ' \
                        'http://git.openstack.org/openstack/tempest ' \
                        'refs/changes/57/557657/4 && git cherry-pick FETCH_HEAD'
